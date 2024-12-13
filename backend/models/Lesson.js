@@ -1,9 +1,21 @@
+
+
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db');
 
-const Lesson = sequelize.define('Lesson', {
-  title: { type: DataTypes.STRING, allowNull: false },
-  content: { type: DataTypes.TEXT, allowNull: false }
-});
+module.exports = (sequelize) => {
+  const Lesson = sequelize.define('Lesson', {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    }
+  }, {
+    tableName: 'Lessons', 
+    timestamps: true 
+  });
 
-module.exports = Lesson;
+  return Lesson;
+};
