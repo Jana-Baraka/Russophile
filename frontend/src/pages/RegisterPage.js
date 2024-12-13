@@ -1,40 +1,47 @@
+
+
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function RegisterPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('Learner');
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:3001/api/auth/register', {
+      const res = await fetch('http://localhost:3000/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password, role }),
-        credentials: 'include'
+        body: JSON.stringify({ username, password }), 
+        credentials: 'include' 
       });
       const data = await res.json();
       if (res.ok) {
         alert('Registered successfully');
+        navigate('/'); 
       } else {
         alert(data.message || 'Registration failed');
       }
     } catch (err) {
       alert('Error registering');
+      console.error(err);
     }
   };
 
   return (
-    <div>
+    <div className="register-container">
       <h2>Register</h2>
-      <form onSubmit={handleRegister}>
+      <form onSubmit={handleRegister} className="register-form">
         <input 
           type="text"
           placeholder="Username"
           value={username}
           onChange={e => setUsername(e.target.value)}
           required 
+          className="register-input"
         />
         <input 
           type="password"
@@ -42,9 +49,9 @@ function RegisterPage() {
           value={password}
           onChange={e => setPassword(e.target.value)}
           required 
+          className="register-input"
         />
-        
-        <button type="submit">Register</button>
+        <button type="submit" className="register-button">Register</button>
       </form>
     </div>
   );
