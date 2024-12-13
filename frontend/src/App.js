@@ -9,7 +9,13 @@ import AdminPage from './pages/AdminPage';
 
 function App() {
   return (
-    <Router>
+<Router>
+      <nav>
+        <Link to="/">Login</Link>{" | "}
+        <Link to="/register">Register</Link>{" | "}
+        <Link to="/lessons">Lessons</Link>{" | "}
+        <Link to="/admin">Admin</Link>
+      </nav>
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
