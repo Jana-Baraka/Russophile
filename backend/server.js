@@ -7,7 +7,7 @@ const authRoutes = require('./routes/auth');
 const lessonRoutes = require('./routes/lessons');
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3001', credentials: true })); 
+app.use(cors({ origin: 'http://localhost:3001', credentials: true })); //3001 for the frontend fetching?
 app.use(express.json());
 app.use(cookieParser());
 
