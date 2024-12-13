@@ -5,7 +5,7 @@ function LessonsPage() {
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/lessons', { credentials: 'include' })
+    fetch('http://localhost:3000/api/lessons', { credentials: 'include' })
       .then(res => res.json())
       .then(data => setLessons(data))
       .catch(err => console.error(err));

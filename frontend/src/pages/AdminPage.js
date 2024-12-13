@@ -6,7 +6,7 @@ function AdminPage() {
   const [content, setContent] = useState('');
 
   const createLesson = async () => {
-    const res = await fetch('http://localhost:3001/api/lessons', {
+    const res = await fetch('http://localhost:3000/api/lessons', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, content }),
