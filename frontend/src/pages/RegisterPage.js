@@ -43,10 +43,7 @@ function RegisterPage() {
           onChange={e => setPassword(e.target.value)}
           required 
         />
-        <select value={role} onChange={e => setRole(e.target.value)}>
-          <option value="Learner">Learner</option>
-          <option value="Admin">Admin</option>
-        </select>
+        
         <button type="submit">Register</button>
       </form>
     </div>
