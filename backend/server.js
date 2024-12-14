@@ -14,7 +14,6 @@ app.use(cookieParser());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/lessons', lessonRoutes);
-app.use('/api/progress', progressRoutes);
 
 app.get('/', (req, res) => {
   res.send("Russophile Backend Running");
