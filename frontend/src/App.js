@@ -11,7 +11,7 @@ import UserAccountPage from './pages/UserAccountPage';
 
 function App() {
   return (
-<Router>
+  <Router>
       <nav>
         <Link to="/">Login</Link>{" | "}
         <Link to="/register">Register</Link>{" | "}
