@@ -7,7 +7,7 @@ import RegisterPage from './pages/RegisterPage';
 import LessonsPage from './pages/LessonsPage';
 import AdminPage from './pages/AdminPage';
 import BookTrackPage from './pages/BookTrackPage';
-
+import UserAccountPage from './pages/UserAccountPage';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Link to="/register">Register</Link>{" | "}
         <Link to="/lessons">Lessons</Link>{" | "}
         <Link to="/admin">Admin</Link>
-        <Link to="/account">UserAccount</Link>
+        <Link to="/account">User Account</Link>
       </nav>
       <Routes>
         <Route path="/" element={<LoginPage />} />
