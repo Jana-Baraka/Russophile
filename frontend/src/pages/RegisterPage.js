@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/AuthPage.css'; 
 
@@ -8,7 +8,6 @@ function RegisterPage() {
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
- 
   const themes = [
     {
       background: "#1a1a2e",
@@ -49,9 +48,6 @@ function RegisterPage() {
     root.style.setProperty("--primary-color", theme.primaryColor);
   };
 
- 
-
-
   const handleRegister = async (e) => {
     e.preventDefault();
     setErrorMessage('');
@@ -83,7 +79,7 @@ function RegisterPage() {
 
   return (
     <section className="container">
-      <div className="register-container">
+      <div className="auth-container"> 
         <div className="circle circle-one"></div>
         <div className="form-container">
           <img src="" alt="illustration" className="illustration" />
@@ -103,7 +99,7 @@ function RegisterPage() {
               onChange={e => setPassword(e.target.value)}
               required
             />
-            <button className="opacity" type="submit">SUBMIT</button>
+            <button className="opacity" type="submit">SUBMIT</button> 
           </form>
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           <div className="register-forget opacity">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/AuthPage.css'; 
 
@@ -49,9 +49,6 @@ function LoginPage() {
     root.style.setProperty("--primary-color", theme.primaryColor);
   };
 
- 
-
-
   const handleLogin = async (e) => {
     e.preventDefault();
     setErrorMessage('');
@@ -83,7 +80,7 @@ function LoginPage() {
 
   return (
     <section className="container">
-      <div className="login-container">
+      <div className="login-container auth-container"> 
         <div className="circle circle-one"></div>
         <div className="form-container">
           <img src="" alt="illustration" className="illustration" />
@@ -103,7 +100,7 @@ function LoginPage() {
               onChange={e => setPassword(e.target.value)}
               required
             />
-            <button className="opacity">SUBMIT</button>
+            <button className="submit-button" type="submit">SUBMIT</button> 
           </form>
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           <div className="register-forget opacity">

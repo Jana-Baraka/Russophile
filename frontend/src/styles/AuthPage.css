@@ -15,7 +15,7 @@ html {
 body {
     margin: 0;
     box-sizing: border-box;
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     background: var(--background);
     color: var(--color);
     letter-spacing: 1px;
@@ -38,7 +38,7 @@ h1 {
     height: 100vh;
 }
 
-.login-container {
+.auth-container { /* Changed from .login-container */
     position: relative;
     width: 22.2rem;
 }
@@ -52,7 +52,7 @@ h1 {
     padding: 2rem;
 }
 
-.login-container form input {
+.auth-container form input { /* Changed from .login-container form input */
     display: block;
     padding: 14.5px;
     width: 100%;
@@ -68,12 +68,12 @@ h1 {
     backdrop-filter: blur(15px);
 }
 
-.login-container form input:focus {
+.auth-container form input:focus { /* Changed from .login-container form input:focus */
     box-shadow: 0 0 16px 1px rgba(10, 9, 9, 0.915);
     animation: wobble 0.3s ease-in;
 }
 
-.login-container form button {
+.auth-container form button { /* Changed from .login-container form button */
     background-color: var(--primary-color);
     color: var(--color);
     display: block;
@@ -90,7 +90,7 @@ h1 {
     transition: all 0.1s ease-in-out;
 }
 
-.login-container form button:hover {
+.auth-container form button:hover { /* Changed from .login-container form button:hover */
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
     transform: scale(1.02);
 }
