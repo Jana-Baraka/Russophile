@@ -6,6 +6,8 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import LessonsPage from './pages/LessonsPage';
 import AdminPage from './pages/AdminPage';
+import BookTrackPage from './pages/BookTrackPage';
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/lessons" element={<LessonsPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/lessons/master-and-margarita" element={<BookTrackPage />} />
       </Routes>
     </Router>
   );
