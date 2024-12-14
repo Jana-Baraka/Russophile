@@ -11,7 +11,7 @@ const sequelize = new Sequelize({
 
 const User = require('./User')(sequelize);
 const Lesson = require('./Lesson')(sequelize);
-
+const UserProgress = require('./UserProgress')(sequelize);
 
 console.log("User model:", User);
 console.log("Lesson model:", Lesson);
@@ -58,4 +58,4 @@ sequelize.sync({ alter: true })
     console.error("DB sync error:", err);
   });
 
-module.exports = { sequelize, User, Lesson };
+module.exports = { sequelize, User, Lesson, UserProgress };
