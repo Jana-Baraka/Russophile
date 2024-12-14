@@ -17,6 +17,7 @@ function App() {
         <Link to="/register">Register</Link>{" | "}
         <Link to="/lessons">Lessons</Link>{" | "}
         <Link to="/admin">Admin</Link>
+        <Link to="/account">UserAccount</Link>
       </nav>
       <Routes>
         <Route path="/" element={<LoginPage />} />
@@ -24,6 +25,7 @@ function App() {
         <Route path="/lessons" element={<LessonsPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/lessons/master-and-margarita" element={<BookTrackPage />} />
+        <Route path="/account" element={<UserAccountPage />} />
       </Routes>
     </Router>
   );
