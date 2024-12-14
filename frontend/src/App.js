@@ -8,6 +8,10 @@ import LessonsPage from './pages/LessonsPage';
 import AdminPage from './pages/AdminPage';
 import BookTrackPage from './pages/BookTrackPage';
 import UserAccountPage from './pages/UserAccountPage';
+import MasterAndMargaritaPage from './pages/MasterAndMargaritaPage'; 
+import GrammarLessonPage from './pages/GrammarLessonPage'; 
+
+
 
 function App() {
   return (
@@ -26,6 +30,8 @@ function App() {
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/lessons/master-and-margarita" element={<BookTrackPage />} />
         <Route path="/account" element={<UserAccountPage />} />
+        <Route path="/lessons/master-and-margarita" element={<MasterAndMargaritaPage />} />
+        <Route path="/lessons/master-and-margarita/grammar" element={<GrammarLessonPage />} />
       </Routes>
     </Router>
   );
