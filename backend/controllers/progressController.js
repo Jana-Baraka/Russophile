@@ -3,7 +3,7 @@ const { UserProgress } = require('../models');
 
 exports.startTrack = async (req, res) => {
   const { bookTitle } = req.body;
-  const userId = req.user.userId;
+  const userId = req.user.id;
   
   try {
    
@@ -21,7 +21,7 @@ exports.startTrack = async (req, res) => {
 
 exports.updateProgress = async (req, res) => {
   const { bookTitle, completedLessonType, answers } = req.body;
-  const userId = req.user.userId;
+  const userId = req.user.id;
 
  
   const correctAnswers = {
@@ -73,7 +73,7 @@ exports.updateProgress = async (req, res) => {
 
 exports.deleteTrack = async (req, res) => {
   const { bookTitle } = req.body;
-  const userId = req.user.userId;
+  const userId = req.user.id;
   
   try {
     const progress = await UserProgress.findOne({ where: { userId, bookTitle } });
@@ -89,7 +89,7 @@ exports.deleteTrack = async (req, res) => {
 
 
 exports.getProgress = async (req, res) => {
-  const userId = req.user.userId;
+  const userId = req.user.id;
   try {
     const tracks = await UserProgress.findAll({ where: { userId } });
     res.json(tracks);

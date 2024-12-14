@@ -5,7 +5,11 @@ module.exports = (sequelize) => {
   const UserProgress = sequelize.define('UserProgress', {
     userId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'Users', 
+        key: 'id'
+      }
     },
     bookTitle: {
       type: DataTypes.STRING,

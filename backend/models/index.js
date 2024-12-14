@@ -15,6 +15,10 @@ const UserProgress = require('./UserProgress')(sequelize);
 
 console.log("User model:", User);
 console.log("Lesson model:", Lesson);
+console.log("UserProgress model:", UserProgress);
+
+User.hasMany(UserProgress, { foreignKey: 'userId' });
+UserProgress.belongsTo(User, { foreignKey: 'userId' });
 
 
 sequelize.sync({ alter: true })

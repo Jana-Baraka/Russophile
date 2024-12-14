@@ -1,12 +1,10 @@
-// backend/middlewares/authMiddleware.js
-
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 require('dotenv').config();
 
 const JWT_SECRET = process.env.JWT_SECRET || 'secret';
 
-// Middleware to Authenticate User
+
 exports.authenticate = async (req, res, next) => {
   const token = req.cookies.token; 
   if (!token) {
@@ -24,9 +22,9 @@ exports.authenticate = async (req, res, next) => {
       return res.status(401).json({ message: "Unauthorized" });
     }
 
-    // Attach user details to request object
+   
     req.user = {
-      id: user.id,
+      id: user.id, 
       username: user.username,
       role: user.role
     };
@@ -40,7 +38,7 @@ exports.authenticate = async (req, res, next) => {
   }
 };
 
-// Middleware to Authorize Admins
+
 exports.isAdmin = (req, res, next) => {
   if (req.user && req.user.role === 'Admin') {
     console.log("User is admin, authorized");
