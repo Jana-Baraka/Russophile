@@ -13,6 +13,7 @@ Russophile is a web application designed to help users learn Russian through eng
 - **React.js**: Core framework for building the user interface.
 - **React Router**: Client-side routing.
 - **CSS animations**: For interactive visuals.
+- **framer-motion**: For more aesthetic animations and visuals.
 
 ### Backend
 - **Express.js**: Web server framework.
@@ -26,5 +27,32 @@ Russophile is a web application designed to help users learn Russian through eng
 ---
 
 ## Steps to Run the Project
+### Prerequisites
 
+- Install **Node.js** (v14 or higher) and **npm** (v6 or higher).
+- Backend: http://localhost:3000
+-Frontend: http://localhost:3001
+
+### Steps
+
+1. **Clone the Repository**  
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+
+2. **Install Dependencies**
+   Backend:
+   ```bash
+    cd backend
+    npm install
+
+  Frontend:
+   ```bash
+    cd ../frontend
+    npm install
+
+
+
+
+   
 
