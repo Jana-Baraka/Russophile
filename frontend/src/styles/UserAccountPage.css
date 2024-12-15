@@ -67,7 +67,7 @@ body {
     border: none;
     border-radius: 5px;
     background-color: #ea4f4c;
-    color: white;
+    color: rgb(58, 50, 50);
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
