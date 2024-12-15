@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/AuthPage.css'; 
+import RussoImage from '../assets/images/russo.png';
 
 function RegisterPage() {
   const [username, setUsername] = useState('');
@@ -82,7 +83,7 @@ function RegisterPage() {
       <div className="auth-container"> 
         <div className="circle circle-one"></div>
         <div className="form-container">
-          <img src="" alt="illustration" className="illustration" />
+        <img src={RussoImage} alt="illustration" className="illustration" />
           <h1 className="opacity">REGISTER</h1>
           <form onSubmit={handleRegister}>
             <input 
