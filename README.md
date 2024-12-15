@@ -3,6 +3,7 @@
 ## Project Description
 
 Russophile is a web application designed to help users learn Russian through engaging and interactive content. Users can start book tracks, complete grammar quizzes, and track their learning progress. The platform integrates a secure authentication system, personalized progress tracking, and user-friendly navigation, providing an immersive experience for language learners. With a scalable backend and responsive frontend, Russophile ensures seamless user interaction and data management.
+<img width="846" alt="logo" src="https://github.com/user-attachments/assets/8fd59f77-ad49-4285-83bb-e60ffad84bee" />
 
 ---
 
